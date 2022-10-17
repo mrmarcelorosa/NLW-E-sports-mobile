@@ -1,5 +1,7 @@
 import { StatusBar } from 'react-native';
 import { Background } from './src/components/background';
+import { Routes } from './src/routes'
+import { Loading } from './src/components/Loading';
 import {
   useFonts,
   Inter_400Regular,
@@ -7,8 +9,7 @@ import {
   Inter_700Bold,
   Inter_900Black
 } from '@expo-google-fonts/inter'
-import { Home } from './src/screens/Home'
-import { Loading } from './src/components/Loading';
+
 
 export default function App() {
   const [fontsLoad] = useFonts({
@@ -26,7 +27,7 @@ export default function App() {
         translucent
       />
 
-      {fontsLoad ? <Home /> : <Loading />}
+      {fontsLoad ? <Routes /> : <Loading />}
 
     </Background>
   );
