@@ -4,7 +4,7 @@ import { GameCard, GameCardProps } from '../../components/GameCard';
 import { Headline } from '../../components/Headline';
 import { useEffect, useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context'
-import {useNavigation} from '@react-navigation/native'
+import { useNavigation } from '@react-navigation/native'
 
 
 import { styles } from './styles';
@@ -16,8 +16,8 @@ export function Home() {
 
   const navigation = useNavigation();
 
-  function handleOpenGame({id, title, bannerUrl}:GameCardProps){
-    navigation.navigate('game', {id, title, bannerUrl});
+  function handleOpenGame({ id, title, bannerUrl }: GameCardProps) {
+    navigation.navigate('game', { id, title, bannerUrl });
   }
 
   useEffect(() => {
@@ -25,6 +25,7 @@ export function Home() {
       .then(response => response.json())
       .then(data => setGames(data))
   }, [])
+
   return (
     <Background>
       <SafeAreaView style={styles.container}>

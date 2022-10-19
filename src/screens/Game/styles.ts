@@ -30,5 +30,16 @@ export const styles = StyleSheet.create({
     height: 160,
     borderRadius: 8,
     marginTop: 32
+  },
+
+  containerList: {
+    width: '100%'
+  },
+
+  contentList: {
+    paddingLeft: 40,
+    paddingRight: 64,
+    alignContent: 'flex-start',
+
   }
 });
